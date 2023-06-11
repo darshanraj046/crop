@@ -19,7 +19,7 @@ def load_model(modelfile):
     return pickle.load(open(modelfile, 'rb'))
 
 
-@app.route('/api/receive_data', methods=['POST'])
+@app.route('/', methods=['POST'])
 def receive_data():
     data = request.get_json()
     st.session_state.esp32_data = data
