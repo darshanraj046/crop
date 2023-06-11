@@ -22,6 +22,7 @@ def load_model(modelfile):
 @app.route('/', methods=['POST'])
 def receive_data():
     data = request.get_json()
+    print(data)
     st.session_state.esp32_data = data
     return "Data received successfully"
 
